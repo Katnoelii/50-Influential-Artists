@@ -1,4 +1,59 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+html {
+  font-size: 62.5%;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+header a {
+  color: grey;
+  text-decoration: none;
+  font-size: 2.6rem;
+}
+.title-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.title-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.title-container h1 {
+  font-size: 6rem;
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  transform: translate(50%, -50%);
+}
+.title-container button {
+  font-size: 2rem;
+  position: absolute;
+  top: 70%;
+  left: 43.5%;
+  transform: translate(50%, -50%);
+}
+.artists-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 80%;
+}
+.artists-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.artists-container .artist1 .bio {
+  font-size: 2rem;
+}
+.artists-container .artist2 {
+  display: block;
+}
+.artists-container .artist2 img {
+  width: 50%;
+}
