@@ -215,7 +215,7 @@ const artists = [
       "paintings": 328
     }
 ]
-
+console.log(artists);
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
@@ -242,7 +242,7 @@ console.log(artists[8].name);
 function getArtistByIndex(artists,idx) {
     return `The artist at index ${idx} is ${artists[idx].name}.`
   }
-  console.log(getArtistByIndex(artists,[5]))
+  console.log(getArtistByIndex(artists,[12]))
   
   /**
 
@@ -256,23 +256,28 @@ function getArtistByIndex(artists,idx) {
  * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(artists,idx){
-  
-  return 'This artist has been removed from the index.';
+    var removed = artists.splice(idx,1);
+    return removed;
   }
-  
-  /**
+  console.log(removeArtist(artists, 12))
+  console.log(artists);
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(art){
+  let woahArt = [];
+  for(let i=0; i<artists.length; i++){
+    if(art[i].paintings >= 100){
+      woahArt.push(art[i]);
+    }
   }
+  return woahArt;
+}
+console.log(lotsOfArt(artists));
 
-
-/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
+/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. 
+Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
 id: 21
 name: Your Name Here, 
@@ -281,12 +286,12 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
-  }
-
+function addArtist(me){
+    var me = artists.push({id:21,name:"kate", years:"1997-2020",genre:"Web Design",nationality:"American",Bio:"Just say anything, George, say what ever's natural, the first thing that comes to your mind. Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. You do? Yeah, it's 8:00. Hey, McFly, I thought I told you never to come in here. Well it's gonna cost you. How much money you got on you?"});
+    return me;
+}
+console.log(addArtist());
+console.log(artists);
 
 
 
