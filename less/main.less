@@ -1,5 +1,6 @@
 html{
     font-size:62.5%;
+    .font();
 }
 .title-container{
     position:relative;
@@ -7,6 +8,7 @@ html{
     color:white;
     margin-bottom:2%;
     img{
+        opacity:75%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -14,14 +16,15 @@ html{
         margin-bottom:2%;
     }//End of img
     h1{
-        font-size:6rem;
+        font-weight:bold;
+        font-size:6.5rem;
         position:absolute;
         top:45%;
-        left:22%;
+        left:25%;
         transform:translate(50%,-50%);
     }//End of h1
     button{
-        font-size:2rem;
+        .button(1.8rem,none);
         position:absolute;
         top:65%;
         left:42.5%;
@@ -30,10 +33,10 @@ html{
 
 }//End of .title-container
 .artists-container{
-    display:flex;
+    .flex();
     flex-direction: row;
     .artist{
-        display:flex;
+        .flex();
         flex-direction: column;
         text-align:center;
         width:50%;
@@ -44,14 +47,17 @@ html{
             margin-right: auto;
         }//end of img
         a{
-            font-size:1.5rem;
-            padding:1rem;
+            padding:1.5rem;
+            font-size:2.5rem;
+            font-weight:bold;
             text-decoration: none;
             color:black;
         }//end of a links
         .bio{
+            margin:auto;
+            width:60%;
             font-size: 1.4rem;
-            text-align: center;
-        }
+            margin-bottom:10%;
+        }//end of bio
     }//end of artist
 }//end of .artists-container
