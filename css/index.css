@@ -1,5 +1,90 @@
-html {
-  font-size: 62.5%;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 header {
   display: flex;
@@ -12,48 +97,59 @@ header a {
   text-decoration: none;
   font-size: 2.6rem;
 }
+html {
+  font-size: 62.5%;
+}
 .title-container {
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: 2%;
 }
 .title-container img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  margin-bottom: 2%;
 }
 .title-container h1 {
   font-size: 6rem;
   position: absolute;
-  top: 35%;
+  top: 45%;
   left: 22%;
   transform: translate(50%, -50%);
 }
 .title-container button {
   font-size: 2rem;
   position: absolute;
-  top: 70%;
-  left: 43.5%;
+  top: 65%;
+  left: 42.5%;
   transform: translate(50%, -50%);
 }
 .artists-container {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  width: 80%;
 }
-.artists-container img {
-  display: block;
+.artists-container .artist {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+}
+.artists-container .artist img {
+  border-radius: 2%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
-.artists-container .artist1 .bio {
-  font-size: 2rem;
+.artists-container .artist a {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
 }
-.artists-container .artist2 {
-  display: block;
-}
-.artists-container .artist2 img {
-  width: 50%;
+.artists-container .artist .bio {
+  font-size: 1.4rem;
+  text-align: center;
 }
