@@ -14,6 +14,9 @@ html{
         margin-right: auto;
         width: 50%;
         margin-bottom:2%;
+        @media @mobile{
+            width: 100%;
+        }
     }//End of img
     h1{
         font-weight:bold;
@@ -22,24 +25,45 @@ html{
         top:45%;
         left:25%;
         transform:translate(50%,-50%);
+        @media @mobile{
+            font-size:4.5rem;
+            top:40%;
+            left:-3%
+        }
     }//End of h1
     button{
         .button(1.8rem,none);
+        background-color: white;
+        color:rgb(97, 96, 96);
         position:absolute;
         top:65%;
         left:42.5%;
         transform:translate(50%,-50%);
+        @media @mobile{
+            .button(1.2rem,none);
+            width:12rem;
+            padding:.5rem;
+            border-radius:.3rem;
+            top:63%;
+            left:27%;
+        }
     }//End of button
 
 }//End of .title-container
 .artists-container{
     .flex();
     flex-direction: row;
+    @media @mobile{
+        flex-direction:column;
+    }
     .artist{
         .flex();
         flex-direction: column;
         text-align:center;
         width:50%;
+        @media @mobile{
+            width:100%
+        }
         img{
             border-radius: 2%;
             width:60%;

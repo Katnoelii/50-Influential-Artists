@@ -103,6 +103,11 @@ header a {
   text-decoration: none;
   font-size: 2.6rem;
 }
+@media (max-width:500px) {
+  header a {
+    font-size: 1.8rem;
+  }
+}
 html {
   font-size: 62.5%;
   font-family: 'Oxygen', sans-serif;
@@ -121,6 +126,11 @@ html {
   width: 50%;
   margin-bottom: 2%;
 }
+@media (max-width:500px) {
+  .title-container img {
+    width: 100%;
+  }
+}
 .title-container h1 {
   font-weight: bold;
   font-size: 6.5rem;
@@ -129,23 +139,53 @@ html {
   left: 25%;
   transform: translate(50%, -50%);
 }
+@media (max-width:500px) {
+  .title-container h1 {
+    font-size: 4.5rem;
+    top: 40%;
+    left: -3%;
+  }
+}
 .title-container button {
   font-size: 1.8rem;
   text-decoration: none;
+  background-color: white;
+  color: #616060;
   position: absolute;
   top: 65%;
   left: 42.5%;
   transform: translate(50%, -50%);
 }
+@media (max-width:500px) {
+  .title-container button {
+    font-size: 1.2rem;
+    text-decoration: none;
+    width: 12rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    top: 63%;
+    left: 27%;
+  }
+}
 .artists-container {
   display: flex;
   flex-direction: row;
+}
+@media (max-width:500px) {
+  .artists-container {
+    flex-direction: column;
+  }
 }
 .artists-container .artist {
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 50%;
+}
+@media (max-width:500px) {
+  .artists-container .artist {
+    width: 100%;
+  }
 }
 .artists-container .artist img {
   border-radius: 2%;
