@@ -1,3 +1,18 @@
+//SELF-STUDY QUESTIONS
+// How would you describe preprocessing to someone new to CSS?
+//ANSWER: It acts as a translator to vanilla CSS, it adds more complicated language and allows for more options for styling a web page.
+
+// What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+//ANSWER: I personally really like nesting. It makes the code much cleaner and allows me to understand certain materials better. The only thing that gives me trouble is remembering how to activate and set it up properly, especially with imports!
+
+// How would you explain the concept of a variable to someone new to programming?
+//ANSWER: A variable is basically a way that we can store data in code.
+
+// What is the purpose of using functions in code?
+//They are reusable chunks of code that perform specific jobs.
+
+// What is a JSON data?
+//ANSWER:Javascript Object Notation
 const artists = [
     {
       "id": 0,
@@ -200,19 +215,21 @@ const artists = [
       "paintings": 328
     }
 ]
-
+console.log(artists);
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
 
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
-
-
+console.log(artists[0].name);
+console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+artists[8].name = "Vincent Van Gogh";
 
-
+console.log(artists[8]);
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,9 +239,10 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(artists,idx) {
+    return `The artist at index ${idx} is ${artists[idx].name}.`
   }
+  console.log(getArtistByIndex(artists,[12]))
   
   /**
 
@@ -237,23 +255,29 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(artists,idx){
+    var removed = artists.splice(idx,1);
+    return removed;
   }
-  
-  /**
+  console.log(removeArtist(artists, 12))
+  console.log(artists);
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(art){
+  let woahArt = [];
+  for(let i=0; i<artists.length; i++){
+    if(art[i].paintings >= 100){
+      woahArt.push(art[i]);
+    }
   }
+  return woahArt;
+}
+console.log(lotsOfArt(artists));
 
-
-/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
+/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. 
+Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
 id: 21
 name: Your Name Here, 
@@ -262,12 +286,12 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
-  }
-
+function addArtist(me){
+    var me = artists.push({id:21,name:"kate", years:"1997-2020",genre:"Web Design",nationality:"American",Bio:"Just say anything, George, say what ever's natural, the first thing that comes to your mind. Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. You do? Yeah, it's 8:00. Hey, McFly, I thought I told you never to come in here. Well it's gonna cost you. How much money you got on you?"});
+    return me;
+}
+console.log(addArtist());
+console.log(artists);
 
 
 
